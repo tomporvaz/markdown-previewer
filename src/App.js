@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
+import marked from "marked";
 import './App.css';
+
+class MyMarkdown extends React.Component {
+  render () {
+    return <div>{marked('# Marked in browser\n\nRendered by **marked**.')}</div>
+  }
+}
+
+
 
 class App extends Component {
   render() {
@@ -9,7 +18,9 @@ class App extends Component {
           <h1>Markdown Previewer</h1>
           <div className="previewer">
             <textarea id="editor"></textarea>
-            <div id="preview">Tom is awesome!!!!</div>
+            
+            <div id="preview"><MyMarkdown/></div>
+            
           </div>
 
         </header>
@@ -20,4 +31,7 @@ class App extends Component {
   }
 }
 
+
 export default App;
+
+
