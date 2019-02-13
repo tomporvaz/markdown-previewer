@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-header {
@@ -8,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: center;*/
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -17,9 +18,29 @@
   color: #61dafb;
 }
 
+.previewer{
+  display: flex;
+  flex-flow: row wrap;
+}
+
 #editor{
   max-width: 95vw;
   width: 500px;
   height: 70vh;
+  margin: 5vmin;
+  margin: 5vmin;
+  padding: 2px;
+  border: solid black 1px;
+}
+
+#preview{
+  max-width: 95vw;
+  width: 500px;
+  height: 70vh;
+  color: black;
+  background-color: white;
+  margin: 5vmin;
+  padding: 2px;
+  border: solid black 1px;
 }
 
