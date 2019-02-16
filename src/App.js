@@ -7,23 +7,24 @@ import './App.css';
 a link, inline code, a code block, a list item, a blockquote, 
 an image, and bolded text*/
 const sampleText = "# Markdown"
-+"\n\n ## a simple markup language for writting text that is readable as-is"
-+ "\n\n Markdown uses special characters to convey additional meaning and formatting for text"
++"\n\n## a simple markup language for writing text that is readable as-is"
++ "\n\nMarkdown uses special characters to convey additional meaning and formatting for text"
 +  "\n\nWith two asterisks you can bold a word.  **This** is bold. One asterisk is for *italics.*"
 + "\n\nWith numbers you can write an ordered list"
 + "\n\n1. Bread \n2. Milk \n3. Eggs"
 + "\n\nAnd with * you can make a bulleted list: \n* no order \n* to this"
-+ "\n\nI can even quote Sheakspear:"
++ "\n\nI can even quote Shakespeare:"
 + "\n\n>There is nothing either good or bad, but thinking makes it so."
 + "\n>(Act II, Scene II)"
 + "\n\nBut of course, markdown is especially good for documenting code by using backticks `let x = 0`"
-+ "\n\nCodeblock uses three backticks"
++ "\n\nCode block uses three back-ticks"
 + "\n\n```"
 + "\nmyMarkdown(markdown) {"
 + "\n  return {__html: marked(markdown)};"
 + "\n}"
 + "\n```"
-+ "\n\n![Makdown Image](https://cdn-images-1.medium.com/max/800/1*QDYH5xE3GnM_7spZ0eSuog.png)"
++ "\n\nHere is an image!"
++ "\n\n![Makdown Image](https://visualpharm.com/assets/11/Markdown-595b40b75ba036ed117d6671.svg)"
 + "\n\n[Wikipedia](https://en.wikipedia.org/wiki/Markdown) has great article including its history"
 + ""
 ;
@@ -41,7 +42,7 @@ class App extends Component {
   }
   
   myMarkdown(markdown) {
-    return {__html: marked(markdown)};
+    return {__html: marked(markdown, {breaks: true})};
   } 
   
   handleChange(event) {
@@ -59,16 +60,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <header className="App-header">
-      <h1>Markdown Previewer</h1>
-      <div className="previewer">
-      <textarea id="editor" value={this.state.input} onChange={this.handleChange}></textarea>
-    
-      <div id="preview" dangerouslySetInnerHTML={this.state.output}></div>
+        <header className="App-header">
+          <h1>Markdown Previewer</h1>
+        </header>
+          <div className="previewer">
+            <textarea id="editor" value={this.state.input} onChange={this.handleChange}></textarea>
       
-      </div>
+          <div id="preview" dangerouslySetInnerHTML={this.state.output}></div>
       
-      </header>
+          </div>
+      
+      
       
       
       </div>
