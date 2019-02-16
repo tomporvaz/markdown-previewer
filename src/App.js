@@ -60,19 +60,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <header className="App-header">
           <h1>Markdown Previewer</h1>
         </header>
-          <div className="previewer">
+
+        <div className="previewer">
+
+          <div className="prevwSect">
+            <h3>Type Markdown</h3>
             <textarea id="editor" value={this.state.input} onChange={this.handleChange}></textarea>
-      
-          <div id="preview" dangerouslySetInnerHTML={this.state.output}></div>
-      
           </div>
-      
-      
-      
-      
+          
+          <div className="prevwSect">
+            <h3>Preview</h3>
+            <div id="preview" dangerouslySetInnerHTML={this.state.output}></div>
+          </div>
+
+        </div>
       </div>
       );
     }

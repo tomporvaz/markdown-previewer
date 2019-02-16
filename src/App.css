@@ -18,6 +18,15 @@
   color: #61dafb;
 }
 
+
+
+.prevwSect > h3 {
+  margin: 0;
+  text-align: center;
+  margin: 1vmin;
+  color: white;
+}
+
 .previewer{
   display: flex;
   flex-flow: row wrap;
@@ -28,7 +37,7 @@
   width: 500px;
   height: 70vh;
   margin: 5vmin;
-  margin: 5vmin;
+  margin: 0 5vmin;
   padding: 2px;
   border: solid black 1px;
 }
@@ -39,7 +48,7 @@
   height: 70vh;
   color: black;
   background-color: white;
-  margin: 5vmin;
+  margin: 0 5vmin;
   padding: 2px;
   border: solid black 1px;
   overflow: scroll;
